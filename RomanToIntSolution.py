@@ -28,5 +28,9 @@ class RomanToIntSolution:
                 else:
                     num += v
             except:
+                # # initially I had 'pass' as the exception, but the output will miss the
+                # # very last roman letter due to temp[i+1] will be out of range
+                # # thus, changing from 'pass' to num += vTo
+                # pass
                 num += v
         return num
