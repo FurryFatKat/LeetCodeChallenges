@@ -28,6 +28,25 @@ class Solution:
 # 208 ms 15.8 MB
 # the above result is fast but defeats the purpose of this exercise.
 
+# the second time going through this study plan
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        res= [0] * len(nums)
+        max_count = len(nums) - 1
+        left = 0
+        right = len(nums) - 1
+        while max_count >= 0:
+            left_sq = nums[left]**2
+            right_sq = nums[right]**2
+            if left_sq > right_sq:
+                res[max_count] = left_sq
+                left += 1
+            else:
+                res[max_count] = right_sq
+                right -= 1
+            max_count -= 1
+        return res
+
 # Discussion board Java solution from user: clarencechee
 # 340 ms 15.9 MB
 class Solution2:

@@ -47,7 +47,9 @@ class Solution:
         slow.next = slow.next.next
         return head
 
-# My first solution is "cheating" a little. Instead of really removing the nth node, I remove the nth value. I recursively determine the indexes (counting from back), then shift the values for all indexes larger than n, and then always drop the head.
+# My first solution is "cheating" a little. Instead of really removing the nth node,
+# I remove the nth value. I recursively determine the indexes (counting from back),
+# then shift the values for all indexes larger than n, and then always drop the head.
 
 class Solution:
     def removeNthFromEnd(self, head, n):
@@ -63,7 +65,9 @@ class Solution:
 
 Index and Remove - AC in 56 ms
 
-# In this solution I recursively determine the indexes again, but this time my helper function removes the nth node. It returns two values. The index, as in my first solution, and the possibly changed head of the remaining list.
+# In this solution I recursively determine the indexes again,
+# but this time my helper function removes the nth node. It returns two values.
+# The index, as in my first solution, and the possibly changed head of the remaining list.
 
 class Solution:
     def removeNthFromEnd(self, head, n):

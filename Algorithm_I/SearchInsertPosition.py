@@ -79,3 +79,25 @@ class Solution3:
             else:
                 left = mid + 1
         return left
+
+# I had to go through the study plan again
+# because I got sick and had to stop for a few days
+# 48 ms, 14.8 MB
+class Solution4:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        left = 0
+        right = len(nums) - 1
+        if target <= nums[left]:
+            return 0
+        if target > nums[right]:
+            return right + 1
+        while left <= right:
+            mid = left + (right - left) // 2
+            if nums[mid] == target:
+                return mid
+            if nums[mid] > target and nums[mid - 1] < target:
+                return mid
+            if nums[mid] > target:
+                right = mid - 1
+            else:
+                left = mid + 1

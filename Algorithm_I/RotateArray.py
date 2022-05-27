@@ -54,6 +54,21 @@ class Solution:
 # the array itself
 # 378 ms, 25.4 MB
 
+# 296 ms, 25.4 MB
+# Second time going through the study plan
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        length = len(nums)
+
+        # covering a corner case
+        if k > length:
+            k = abs(k % length)
+        res = nums.copy()
+        for i in range(len(nums)):
+            nums[i] = res[-k+i]
 
 # solution explanation from 'user3284'
 # https://leetcode.com/problems/rotate-array/discuss/269948/4-solutions-in-python-(From-easy-to-hard)

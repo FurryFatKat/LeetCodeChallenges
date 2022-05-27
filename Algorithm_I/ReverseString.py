@@ -30,6 +30,18 @@ class Solution:
             left += 1
             right -= 1
 
+# 212 ms, 18.8 MB
+# second time going through the study plan
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        s2 = s[::-1].copy()
+        for i in range(len(s)):
+            s[i] = s2[i]
+
+
 # One line solution by DBabichev
 # https://leetcode.com/problems/reverse-string/discuss/669571/Python-Oneliner-two-pointers-explained
 # 215 ms, 18.4 MB

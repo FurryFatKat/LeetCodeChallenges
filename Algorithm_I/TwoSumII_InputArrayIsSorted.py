@@ -50,6 +50,19 @@ class Solution2:
             else:
                 right -= 1
 
+# second time going through the study plan
+# 219 ms, 14.9 MB
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        left = 0
+        right = len(numbers) - 1
+        while left < right:
+            if numbers[left] + numbers[right] == target:
+                return [left + 1, right + 1]
+            if numbers[left] + numbers[right] > target:
+                right -= 1
+            else:
+                left += 1
 
 # user OldCodingFarmer's solutions
 # https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/discuss/51249/Python-different-solutions-(two-pointer-dictionary-binary-search).
