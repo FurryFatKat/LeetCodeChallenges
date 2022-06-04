@@ -97,6 +97,24 @@ REPL test:
 '''
 
 
+'''
+
+https://leetcode.com/problems/single-number/discuss/1771791/Python3-ONE-LINER-**-Explained
+
+We use the nice property of XOR operation which is if you XOR same numbers it will return zero. Since the nums contains just one non-repeating number, we can just XOR all numbers together and the final result will be our answer.
+
+For reference about reduce: https://thepythonguru.com/python-builtin-functions/reduce/
+
+def singleNumber(self, nums: List[int]) -> int:
+	return reduce(lambda total, el: total ^ el, nums)
+
+
+
+ilyann said: This can be simpler: reduce(xor, nums) (LeetCode imports operator.xor as xor).
+
+'''
+
+
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
